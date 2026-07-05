@@ -151,9 +151,9 @@
     section{ padding:64px 0; }
     .hero{ min-height:82svh; }
     .hero-media img{ object-position:55% 62%; }
-    .hero-inner{ padding:74px 0 54px; }
-    .hero h1{ font-size:clamp(2rem,10vw,2.8rem); max-width:13ch; }
-    .hero p{ max-width:30ch; }
+    .hero-inner{ width:min(100%,360px); margin:0 auto; padding:74px 24px 54px; }
+    .hero h1{ font-size:clamp(1.78rem,7.6vw,2.2rem); line-height:1.12; max-width:11.4ch; }
+    .hero p{ max-width:25ch; font-size:.93rem; }
     .hero-actions{ flex-direction:column; gap:10px; margin-top:22px; }
     .hero-cta{ width:min(100%,285px); justify-content:center; padding:14px 22px; }
     .hero-proof{ max-width:28ch; font-size:.68rem; letter-spacing:.08em; }
@@ -267,6 +267,8 @@
 
   .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
   .reveal.in{ opacity:1; transform:none; }
+  :target .reveal,
+  :target.reveal{ opacity:1; transform:none; }
   @media (prefers-reduced-motion:reduce){ *{ scroll-behavior:auto !important; animation:none !important; transition:none !important; } .reveal{ opacity:1; transform:none; } }
   :focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
 </style>
@@ -735,6 +737,22 @@ if('IntersectionObserver' in window){
 }else{
   document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
 }
+
+function revealAndScrollHashTarget(){
+  if(!window.location.hash) return;
+  const target=document.querySelector(window.location.hash);
+  if(!target) return;
+  if(target.classList.contains("reveal")) target.classList.add("in");
+  target.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
+  const root=document.documentElement;
+  const previousScrollBehavior=root.style.scrollBehavior;
+  root.style.scrollBehavior="auto";
+  target.scrollIntoView({block:"start",behavior:"auto"});
+  root.style.scrollBehavior=previousScrollBehavior;
+}
+requestAnimationFrame(()=>requestAnimationFrame(revealAndScrollHashTarget));
+window.addEventListener("load", revealAndScrollHashTarget);
+window.addEventListener("hashchange", ()=>requestAnimationFrame(revealAndScrollHashTarget));
 </script>
 </body>
 </html>
