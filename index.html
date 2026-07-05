@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Homeware Depo — Tableware &amp; Homeware Berkualitas dari Bali</title>
+<meta name="description" content="Homeware Depo — tableware &amp; homeware kualitas hotel &amp; villa dari Bali. Piring, mangkuk, gelas &amp; cutlery. 4,9★ · 6.883+ terjual. Belanja di Tokopedia, Shopee &amp; WhatsApp." />
+<link rel="icon" type="image/png" href="photos-web/logo-badge.png" />
+<link rel="apple-touch-icon" href="photos-web/logo-badge.png" />
+<!-- CATATAN DEPLOY ZOHO: tag OG/meta di bawah HARUS diisi lewat Page SEO settings Zoho,
+     bukan lewat widget HTML — <meta> di dalam body widget diabaikan browser. -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Homeware Depo — Tableware &amp; Homeware dari Bali" />
+<meta property="og:description" content="Kualitas hotel &amp; villa untuk meja makanmu. 4,9★ · 790 ulasan · 6.883+ terjual. Belanja di Tokopedia, Shopee &amp; WhatsApp." />
+<meta property="og:image" content="og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Homeware Depo — Tableware &amp; Homeware dari Bali" />
+<meta name="twitter:description" content="Kualitas hotel &amp; villa untuk meja makanmu. 4,9★ · 6.883+ terjual." />
+<meta name="twitter:image" content="og-image.jpg" />
+<link rel="preload" as="image" href="photos-web/hero-villa-mobile.webp" media="(max-width:700px)" />
+<link rel="preload" as="image" href="photos-web/hero-villa.webp" media="(min-width:701px)" />
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+
+<!-- ════════════════════════════════════════════════════════════════════
+     CARA EDIT (baca dulu)
+     • Semua teks, link & FOTO diatur di blok CONFIG paling bawah file ini.
+     • Untuk menampilkan foto asli: isi "image" dengan URL foto (mis. dari
+       website / Instagram kamu). Kosongkan ("") = tampil tile elegan
+       berisi nama koleksi.
+     • Tombol toko: kosongkan link ("") untuk menyembunyikannya.
+     ════════════════════════════════════════════════════════════════════ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bone:#f1f2e9;        /* soft green-cream canvas */
+    --paper:#f8f9f2;
+    --ink:#2a2e24;         /* soft dark olive (gentler than black) */
+    --ink-soft:#5f6455;      /* darkened for WCAG AA on bone */
+    --line:#e0e3d2;
+    --sage:#89a15a;        /* logo primary green */
+    --sage-dark:#75894c;   /* hover state */
+    --sage-soft:#b5ba90;   /* logo secondary green */
+    --sage-tint:#e9edda;   /* light sage wash for bands */
+    --sage-btn:#5f7040;    /* darker green for white-text buttons (AA) */
+    --deep:#262b1f;        /* reserved (no longer used for big blocks) */
+    --stone-a:#b5ba90;     /* placeholder media gradient */
+    --stone-b:#89a15a;
+    --tile:#e9ebdc;        /* light placeholder tile */
+    --tokopedia:#03ac0e;
+    --shopee:#ee4d2d;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Plus Jakarta Sans',system-ui,sans-serif; background:var(--bone); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a{ text-decoration:none; color:inherit; }
+  img{ display:block; width:100%; height:100%; object-fit:cover; }
+  .wrap{ max-width:1200px; margin:0 auto; padding:0 26px; }
+
+  .serif{ font-family:'Fraunces',Georgia,serif; font-weight:400; }
+  .label{ font-size:.72rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; }
+
+  /* divider rule under section titles (VASSA-style) */
+  .rule{ width:54px; height:2px; background:var(--sage); margin:14px 0 30px; border-radius:2px; }
+
+  /* ── Nav ── */
+  header{ position:sticky; top:0; z-index:60; background:rgba(245,245,240,.86); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height:72px; }
+  .logo{ font-family:'Fraunces',serif; font-weight:500; font-size:1.5rem; letter-spacing:.02em; display:inline-flex; align-items:center; gap:11px; }
+  .logo img{ width:56px; height:56px; object-fit:contain; border-radius:50%; }
+  .logo b{ font-weight:500; }
+
+  /* language toggle */
+  .lang-toggle{ display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; margin-left:18px; }
+  .lang-toggle button{ border:0; background:none; padding:10px 15px; font:inherit; font-size:.72rem; font-weight:700; letter-spacing:.1em; cursor:pointer; color:var(--ink-soft); transition:background .15s,color .15s; }
+  .lang-toggle button.on{ background:var(--sage-soft); color:var(--ink); }
+  .nav-links{ display:flex; gap:30px; }
+  .nav-links a{ font-size:.74rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); transition:color .15s; }
+  .nav-links a:hover{ color:var(--ink); }
+  .nav-shop{ border:1px solid var(--ink); padding:9px 18px; border-radius:999px; font-size:.72rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; transition:background .15s,color .15s; }
+  .nav-shop:hover{ background:var(--ink); color:var(--bone); }
+  .burger{ display:none; background:none; border:0; cursor:pointer; color:var(--ink); padding:8px; }
+  @media (max-width:820px){ .nav-links{ display:none; } .burger{ display:block; } .nav-shop{ display:none; } .logo{ font-size:1.12rem; white-space:nowrap; } .logo img{ width:46px; height:46px; } .lang-toggle{ margin-left:10px; } }
+
+  /* mobile dropdown menu */
+  .mobile-menu{ display:none; border-top:1px solid var(--line); background:var(--paper); }
+  .mobile-menu.open{ display:block; }
+  .mobile-menu a{ display:block; padding:16px 26px; font-size:.8rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink); border-bottom:1px solid var(--line); }
+  .mobile-menu a:last-child{ border-bottom:0; }
+
+  /* ── Hero (centered, Apple-style) ── */
+  .hero{ position:relative; min-height:78vh; display:flex; align-items:center; justify-content:center; overflow:hidden; text-align:center; }
+  .hero-media{ position:absolute; inset:0; background:linear-gradient(150deg,#c9cfae 0%,var(--sage-soft) 45%,var(--sage) 100%); }
+  .hero-media img{ position:absolute; inset:0; animation:slowzoom 18s ease-out forwards; }
+  @keyframes slowzoom{ from{ transform:scale(1.08);} to{ transform:scale(1);} }
+  .hero-scrim{ position:absolute; inset:0; background:radial-gradient(ellipse 120% 85% at 50% 46%,rgba(30,32,24,.26),rgba(30,32,24,.5)),linear-gradient(to top,rgba(30,32,24,.46) 0%,rgba(30,32,24,.22) 55%,rgba(30,32,24,.34) 100%); }
+  .hero-inner{ position:relative; z-index:2; color:#fbfbf5; padding:96px 0; display:flex; flex-direction:column; align-items:center; }
+  .hero .eyebrow{ color:rgba(251,251,245,.9); margin-bottom:18px; }
+  .hero h1{ font-family:'Fraunces',serif; font-weight:300; font-size:clamp(2.2rem,5.6vw,4.4rem); line-height:1.08; letter-spacing:-.015em; max-width:15ch; margin:0 auto; text-wrap:balance; }
+  .hero h1 em{ font-style:normal; }
+  .hero p{ margin:18px auto 0; max-width:36ch; font-size:clamp(.98rem,1.8vw,1.14rem); color:rgba(251,251,245,.92); text-wrap:balance; }
+  .hero-cta{ display:inline-flex; align-items:center; gap:11px; margin-top:30px; background:var(--sage-btn); color:#fff; padding:15px 30px; border-radius:999px; font-size:.78rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; transition:transform .15s,background .15s; }
+  .hero-cta:hover{ transform:translateY(-2px); background:#516134; }
+
+  /* ── Trust bar (social proof) ── */
+  .trust{ background:var(--paper); border-bottom:1px solid var(--line); }
+  .trust .wrap{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px 34px; padding-top:22px; padding-bottom:22px; text-align:center; }
+  .trust .stat{ display:flex; flex-direction:column; line-height:1.15; }
+  .trust .stat b{ font-family:'Fraunces',serif; font-weight:500; font-size:1.5rem; color:var(--ink); }
+  .trust .stat span{ font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin-top:3px; }
+  .trust .sep{ width:1px; height:34px; background:var(--line); }
+  .trust .ship{ flex-basis:100%; text-align:center; font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; color:var(--sage-dark); margin-top:2px; }
+  @media (max-width:640px){ .trust .sep{ display:none; } .trust .wrap{ gap:14px 26px; } .trust .stat b{ font-size:1.28rem; } }
+
+  /* WhatsApp catalog CTA button */
+  .news-cta{ display:inline-flex; align-items:center; gap:10px; margin-top:4px; background:#25d366; color:#fff; padding:15px 30px; border-radius:999px; font-size:.82rem; font-weight:600; letter-spacing:.03em; transition:transform .15s,filter .15s; }
+  .news-cta:hover{ transform:translateY(-2px); filter:brightness(1.05); }
+
+  /* ── Section scaffolding ── */
+  section{ padding:96px 0; }
+  @media (max-width:700px){ section{ padding:64px 0; } .hero{ min-height:88svh; } }
+
+  /* ── WhatsApp float (shows only when BRAND.whatsapp is set) ── */
+  .wa-float{ position:fixed; right:18px; bottom:18px; z-index:80; width:56px; height:56px; border-radius:999px; background:#25d366; display:none; place-items:center; box-shadow:0 6px 20px rgba(20,18,15,.28); transition:transform .15s; }
+  .wa-float:hover{ transform:scale(1.06); }
+  .wa-float.on{ display:grid; }
+  .sec-label{ display:flex; align-items:center; gap:14px; color:var(--ink-soft); }
+  .sec-title{ font-family:'Fraunces',serif; font-weight:300; font-size:clamp(2rem,4.4vw,3.2rem); line-height:1.05; letter-spacing:-.01em; }
+
+  /* About */
+  .about-top{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:end; }
+  .about-top p{ color:var(--ink-soft); font-size:1.06rem; max-width:48ch; }
+  .about-top .more{ display:inline-flex; align-items:center; gap:9px; margin-top:18px; font-size:.76rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; border-bottom:2px solid var(--sage); padding-bottom:4px; }
+  @media (max-width:760px){ .about-top{ grid-template-columns:1fr; gap:22px; } }
+
+  /* horizontal lifestyle gallery */
+  .gallery{ margin-top:54px; display:flex; gap:20px; overflow-x:auto; padding-bottom:14px; scroll-snap-type:x mandatory; scrollbar-width:thin; }
+  .gallery::-webkit-scrollbar{ height:6px; } .gallery::-webkit-scrollbar-thumb{ background:var(--line); border-radius:99px; }
+  .gframe{ flex:0 0 auto; width:min(74vw,330px); scroll-snap-align:start; }
+  .gmedia{ aspect-ratio:4/5; border-radius:18px; overflow:hidden; background:var(--tile); display:grid; place-items:center; position:relative; }
+  .gmedia .ph{ font-family:'Fraunces',serif; font-size:1.5rem; color:var(--ink-soft); opacity:.55; padding:0 18px; text-align:center; }
+  .gframe .cap{ margin-top:12px; font-size:.78rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); }
+
+  /* centered brand band */
+  .band{ background:var(--sage-tint); border-top:1px solid var(--line); border-bottom:1px solid var(--line); text-align:center; }
+  .band .mark{ font-family:'Fraunces',serif; font-weight:500; font-size:1.7rem; letter-spacing:.04em; }
+  .band p{ font-family:'Fraunces',serif; font-weight:300; font-size:clamp(1.5rem,3.4vw,2.4rem); line-height:1.3; max-width:20ch; margin:14px auto 0; }
+  
+
+  /* ── Collections wall ── */
+  .col-grid{ margin-top:54px; display:grid; grid-template-columns:repeat(auto-fill,minmax(258px,1fr)); gap:26px; }
+  /* HP: 2 kartu per baris = rapi + scroll setengahnya */
+  @media (max-width:700px){
+    .col-grid{ grid-template-columns:1fr 1fr; gap:14px; margin-top:36px; }
+    .col-name{ font-size:1.05rem; margin-top:11px; }
+    .col-blurb{ font-size:.78rem; }
+    .col-shops{ flex-direction:column; gap:6px; margin-top:auto; padding-top:10px; }
+    .shopbtn{ padding:9px 6px; font-size:.72rem; }
+  }
+  .col-card{ display:flex; flex-direction:column; }
+  .col-media{ aspect-ratio:3/4; border-radius:18px; overflow:hidden; background:var(--tile); position:relative; }
+  .col-media .ph{ position:absolute; inset:0; display:grid; place-items:center; background:linear-gradient(150deg,#e9ebdc,#cdd2b4); }
+  .col-media .ph span{ font-family:'Fraunces',serif; font-weight:300; font-size:1.7rem; color:#7d8465; }
+  .col-name{ font-family:'Fraunces',serif; font-weight:400; font-size:1.35rem; margin-top:16px; }
+  .col-blurb{ color:var(--ink-soft); font-size:.92rem; margin-top:2px; }
+  .col-shops{ display:flex; flex-direction:column; gap:8px; margin-top:auto; padding-top:14px; }
+  .shopbtn{ flex:1; display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:11px 8px; border-radius:999px; font-size:.78rem; font-weight:600; letter-spacing:.03em; color:var(--ink); background:#fff; border:1px solid var(--line); transition:transform .12s,border-color .12s,background .12s; }
+  .shopbtn:hover{ transform:translateY(-2px); border-color:var(--sage); background:var(--paper); }
+  .b-toko{} .b-shop{}
+
+  /* ── Shop-online-at row ── */
+  .shoprow{ background:var(--sage-tint); color:var(--ink); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .shoprow .sec-label{ color:var(--sage-dark); }
+  .shoprow .sec-title{ color:var(--ink); }
+  .market-grid{ margin-top:48px; display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px; }
+  .market{ background:#fff; border:1px solid var(--line); border-radius:20px; padding:34px 24px; text-align:center; transition:box-shadow .18s,transform .18s; }
+  .market:hover{ box-shadow:0 10px 30px rgba(60,68,40,.1); transform:translateY(-3px); }
+  .market .ico{ display:grid; place-items:center; margin-bottom:16px; }
+  .market .mname{ font-family:'Fraunces',serif; font-size:1.3rem; }
+  .market .msub{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); margin-top:6px; }
+  @media (max-width:680px){ .market-grid{ grid-template-columns:1fr 1fr; gap:12px; } }
+  @media (max-width:420px){ .market-grid{ grid-template-columns:1fr; } }
+
+  /* ── Newsletter ── */
+  .news{ text-align:center; background:var(--sage-tint); border-bottom:1px solid var(--line); }
+  .news h3{ font-family:'Fraunces',serif; font-weight:300; font-size:clamp(1.8rem,4vw,2.6rem); }
+  .news p{ color:var(--ink-soft); max-width:48ch; margin:14px auto 26px; }
+  .news .field{ display:flex; gap:10px; max-width:440px; margin:0 auto; flex-wrap:wrap; justify-content:center; }
+  .news input{ flex:1; min-width:220px; padding:14px 18px; border:1px solid var(--line); border-radius:999px; background:#fff; font:inherit; font-size:.95rem; color:var(--ink); }
+  .news input:focus{ outline:none; border-color:var(--sage); }
+  .news button{ padding:14px 28px; border:0; border-radius:999px; background:var(--sage); color:#fff; font:inherit; font-size:.76rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; cursor:pointer; transition:transform .14s,background .14s; }
+  .news button:hover{ background:var(--sage-dark); }
+  .news button:hover{ transform:translateY(-2px); }
+
+  /* ── Contact ── */
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+  .contact h3{ font-family:'Fraunces',serif; font-weight:300; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.1; }
+  .contact p{ color:var(--ink-soft); margin-top:14px; max-width:42ch; }
+  .contact .cta{ display:inline-flex; align-items:center; gap:10px; margin-top:24px; background:var(--sage-btn); color:#fff; padding:15px 30px; border-radius:999px; font-size:.76rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; transition:transform .15s,background .15s; }
+  .contact .cta:hover{ transform:translateY(-2px); background:#516134; }
+  .contact-media{ aspect-ratio:16/10; max-width:520px; justify-self:end; width:100%; border-radius:20px; overflow:hidden; background:linear-gradient(140deg,var(--stone-a),var(--stone-b)); display:grid; place-items:center; position:relative; border:1px solid var(--line); }
+  @media (max-width:760px){ .contact-media{ max-width:100%; justify-self:stretch; aspect-ratio:16/11; } }
+  .contact-media .ph{ font-family:'Fraunces',serif; color:rgba(247,242,233,.8); font-size:1.4rem; }
+  .contact-media iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; filter:saturate(.5) contrast(.97) brightness(1.02); }
+  .map-dir{ position:absolute; left:50%; bottom:14px; transform:translateX(-50%); z-index:2; display:inline-flex; align-items:center; gap:8px; background:var(--sage-btn); color:#fff; padding:11px 20px; border-radius:999px; font-size:.74rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; box-shadow:0 4px 14px rgba(20,22,15,.25); transition:background .15s,transform .15s; white-space:nowrap; }
+  .map-dir:hover{ background:#516134; transform:translateX(-50%) translateY(-2px); }
+  @media (max-width:760px){ .contact-grid{ grid-template-columns:1fr; gap:28px; } }
+
+  /* ── Footer ── */
+  footer{ background:var(--paper); color:var(--ink); padding:64px 0 40px; border-top:1px solid var(--line); }
+  .foot-top{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; }
+  .foot-logo{ font-family:'Fraunces',serif; font-size:1.6rem; }
+  .foot-tag{ color:var(--ink-soft); font-size:.9rem; max-width:34ch; margin-top:10px; line-height:1.7; }
+  .foot-nav{ display:flex; gap:40px; flex-wrap:wrap; }
+  .foot-col h4{ font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--sage-dark); margin-bottom:14px; }
+  .foot-col a{ display:block; color:var(--ink); font-size:.92rem; margin-bottom:9px; transition:color .15s; }
+  .foot-col a:hover{ color:var(--sage-dark); }
+  .foot-bottom{ display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center; margin-top:48px; padding-top:24px; border-top:1px solid var(--line); }
+  .socials{ display:flex; gap:14px; }
+  .socials a{ width:38px; height:38px; border:1px solid var(--line); border-radius:999px; display:grid; place-items:center; transition:background .15s,border-color .15s; color:var(--ink-soft); }
+  .socials a:hover{ background:var(--sage-tint); border-color:var(--sage); }
+  .copy{ color:var(--ink-soft); font-size:.84rem; }
+
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce){ *{ scroll-behavior:auto !important; animation:none !important; transition:none !important; } .reveal{ opacity:1; transform:none; } }
+  :focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" id="logo" translate="no"><span id="logo-name">Homeware Depo</span></a>
+    <nav class="nav-links">
+      <a href="#tentang" data-i18n="nav_about">Tentang</a>
+      <a href="#koleksi" data-i18n="nav_col">Koleksi</a>
+      <a href="#belanja" data-i18n="nav_shop">Belanja Online</a>
+      <a href="#kontak" data-i18n="nav_contact">Kontak</a>
+    </nav>
+    <div style="display:flex;align-items:center;">
+      <a class="nav-shop" href="#belanja" data-i18n="nav_shop_btn">Belanja</a>
+      <div class="lang-toggle" role="group" aria-label="Bahasa / Language">
+        <button id="lang-id" onclick="setLang('id')">ID</button>
+        <button id="lang-en" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+    <button class="burger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu(this)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#tentang" data-i18n="nav_about">Tentang</a>
+    <a href="#koleksi" data-i18n="nav_col">Koleksi</a>
+    <a href="#belanja" data-i18n="nav_shop">Belanja Online</a>
+    <a href="#kontak" data-i18n="nav_contact">Kontak</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0;">
+  <div class="hero-media" id="hero-media"></div>
+  <div class="hero-scrim"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow label">Tableware &amp; Homeware · Bali</div>
+    <h1 class="serif" data-i18n="hero_h1">Setiap rumah layak punya sesuatu yang istimewa.</h1>
+    <p data-i18n="hero_p">Piring, mug, mangkuk, dan perlengkapan meja kualitas hotel &amp; villa — kini hadir di meja makanmu.</p>
+    <a class="hero-cta" href="#belanja"><span data-i18n="hero_cta">Di mana membeli</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- TRUST BAR (social proof) -->
+<section class="trust" aria-label="Reputasi toko">
+  <div class="wrap">
+    <div class="stat"><b data-i18n="tr_rating_v">4,9★</b><span data-i18n="tr_rating">Rating Tokopedia</span></div>
+    <div class="sep"></div>
+    <div class="stat"><b data-i18n="tr_reviews_v">790+</b><span data-i18n="tr_reviews">Ulasan</span></div>
+    <div class="sep"></div>
+    <div class="stat"><b data-i18n="tr_sold_v">6.883+</b><span data-i18n="tr_sold">Terjual</span></div>
+    <div class="sep"></div>
+    <div class="stat"><b data-i18n="tr_followers_v">19rb+</b><span data-i18n="tr_followers">Pengikut IG</span></div>
+    <div class="ship" data-i18n="tr_ship">Kirim ke seluruh Indonesia</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="tentang">
+  <div class="wrap reveal">
+    <div class="sec-label"><span class="label" data-i18n="about_label">Tentang Kami</span></div>
+    <div class="rule"></div>
+    <div class="about-top">
+      <h2 class="sec-title" data-i18n="about_title">Spesialis homeware dari Bali.</h2>
+      <div>
+        <p data-i18n="about_p">Kami percaya setiap rumah layak punya sesuatu yang istimewa. Selama bertahun-tahun kami menyuplai hotel, villa, dan restoran di Bali — kini koleksi yang sama bisa hadir di rumahmu, dengan bentuk, fungsi, dan rasa di setiap detail.</p>
+        <a class="more" href="#koleksi"><span data-i18n="about_more">Lihat koleksi</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<!-- BRAND BAND -->
+<section class="band">
+  <div class="wrap reveal">
+    <div class="mark serif" translate="no">Homeware Depo</div>
+    <p class="serif" data-i18n="band_p">Desain &amp; kualitas yang mengubah rumah jadi tempat istimewa.</p>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section id="koleksi">
+  <div class="wrap reveal">
+    <div class="sec-label"><span class="label" data-i18n="col_label">Koleksi Kami</span></div>
+    <div class="rule"></div>
+    <h2 class="sec-title" data-i18n="col_title">Belanja per kategori.</h2>
+    <div class="col-grid" id="col-grid"></div>
+  </div>
+</section>
+
+<!-- SHOP ONLINE AT -->
+<section class="shoprow" id="belanja">
+  <div class="wrap reveal">
+    <div class="sec-label"><span class="label" data-i18n="shop_label">Belanja Online</span></div>
+    <div class="rule" style="background:var(--sage);"></div>
+    <h2 class="sec-title" data-i18n="shop_title">Belanja koleksi kami di sini.</h2>
+    <div class="market-grid" id="market-grid"></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="news">
+  <div class="wrap reveal">
+    <h3 class="serif" data-i18n="news_h">Tetap terhubung</h3>
+    <p data-i18n="news_p">Daftar untuk kabar koleksi terbaru, promo, dan inspirasi menata meja makanmu.</p>
+    <a class="news-cta" id="catalog-wa" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z"/></svg>
+      <span data-i18n="news_btn">Minta katalog via WhatsApp</span>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="kontak">
+  <div class="wrap reveal contact-grid">
+    <div class="contact">
+      <h3 class="serif" data-i18n="contact_h">Punya pertanyaan atau butuh info lebih?</h3>
+      <p data-i18n="contact_p">Kami siap membantu — soal produk, stok, pengiriman, atau pesanan jumlah besar untuk hotel &amp; villa.</p>
+      <a class="cta" id="contact-cta" href="#"><span data-i18n="contact_cta">Hubungi kami</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="contact-media" id="map-box"><span class="ph">Homeware Depo</span></div>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOAT (aktif otomatis kalau BRAND.whatsapp diisi) -->
+<a class="wa-float" id="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z"/></svg>
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-logo serif" translate="no">Homeware Depo</div>
+        <div class="foot-tag" data-i18n="foot_tag">Jl. Raya Semer No. 55, Kerobokan, Badung, Bali. Kirim ke seluruh Indonesia.</div>
+      </div>
+      <div class="foot-nav">
+        <div class="foot-col">
+          <h4 data-i18n="foot_shop">Belanja</h4>
+          <a id="f-toko" href="#" target="_blank" rel="noopener">Tokopedia</a>
+          <a id="f-shop" href="#" target="_blank" rel="noopener">Shopee</a>
+          <a id="f-ig" href="#" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div class="foot-col">
+          <h4>Info</h4>
+          <a href="#tentang" data-i18n="nav_about">Tentang</a>
+          <a href="#koleksi" data-i18n="nav_col">Koleksi</a>
+          <a id="f-mail" href="#">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="socials" id="socials"></div>
+      <div class="copy">© <span id="year"></span> <span translate="no">Homeware Depo</span>. <span data-i18n="foot_rights">Semua hak dilindungi.</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ════════════════════════════════════════════════════════════════════
+   ▼▼▼  EDIT DI SINI  ▼▼▼
+   ════════════════════════════════════════════════════════════════════ */
+
+const BRAND = {
+  name:"Homeware Depo",
+  email:"info@homewaredepo.com",
+  whatsapp:"6287814360273",   // WA resmi toko → tombol "Hubungi kami" + bubble WA aktif otomatis.
+  logoImage:"photos-web/logo-badge.webp",  // badge resmi. Saat deploy: upload ke Zoho lalu ganti URL.
+  address:"Jl. Raya Semer No. 55, Kerobokan, Kuta Utara, Badung, Bali 80361",   // dipakai untuk peta + petunjuk arah
+
+  tokopedia:"https://www.tokopedia.com/homewaredepo",
+  shopee:"https://shopee.co.id/homewaredepo.bali",
+  instagram:"https://www.instagram.com/homeware_depo/",
+  facebook:"https://www.facebook.com/homewaredepo/",
+  tiktok:"",   // isi link TikTok kalau ada
+
+  heroImage:"photos-web/hero-villa.webp",          // ★ meja panjang villa (tanpa TV). Saat deploy: upload ke Zoho lalu ganti URL.
+  heroImageMobile:"photos-web/hero-villa-mobile.webp",   // versi potret untuk HP (crop tengah).
+};
+
+/* GALLERY = strip foto gaya hidup di bagian "Tentang".
+   image:"" = tile elegan berisi caption. Tempel URL foto untuk tampil nyata.
+   (Saat ini berisi TEST IMAGE — ganti dengan foto Instagram kamu.) */
+/* Galeri = OPSIONAL. 3 foto cukup (bisa juga dikosongkan semua —
+   image:"" menampilkan tile elegan tanpa foto). Jangan lebih dari 3-4 di HP. */
+const GALLERY = [
+  { cap:"Meja Pagi",    cap_en:"Morning Table", image:"photos-web/gal-meja-pagi.webp" },
+  { cap:"Coffee & Tea", cap_en:"Coffee & Tea",  image:"photos-web/gal-coffee.webp" },
+  { cap:"Untuk Villa",  cap_en:"For Villas",    image:"photos-web/gal-villa.webp" },
+];
+
+/* COLLECTIONS = dinding kategori. Klik → buka toko.
+   Link Tokopedia di bawah = etalase ASLI tokomu. "image" saat ini TEST IMAGE
+   — ganti dengan foto produk kamu. Kosongkan link ("") untuk sembunyikan tombol. */
+/* 4 kategori utama (sesuai keputusan Papa). image:"" = tile sage elegan
+   sampai foto asli masuk. Kategori lain bisa ditambah lagi kapan saja. */
+const COLLECTIONS = [
+  { name:"Piring", name_en:"Plates", blurb:"Piring keramik, piring cekung & saji.", blurb_en:"Ceramic plates, deep plates & serving.",
+    image:"photos-web/cat-piring.webp",
+    tokopedia:"https://www.tokopedia.com/homewaredepo/etalase/plate",
+    shopee:"https://shopee.co.id/homewaredepo.bali" },
+  { name:"Mangkuk", name_en:"Bowls", blurb:"Mangkuk sereal, sup & salad.", blurb_en:"Cereal, soup & salad bowls.",
+    image:"photos-web/cat-mangkuk.webp",
+    tokopedia:"https://www.tokopedia.com/homewaredepo/etalase/bowl",
+    shopee:"https://shopee.co.id/homewaredepo.bali" },
+  { name:"Gelas", name_en:"Glassware", blurb:"Gelas air, wine & cocktail.", blurb_en:"Water, wine & cocktail glasses.",
+    image:"photos-web/cat-gelas.webp",
+    tokopedia:"https://www.tokopedia.com/homewaredepo/etalase/water-glass",
+    shopee:"https://shopee.co.id/homewaredepo.bali" },
+  { name:"Cutlery", name_en:"Cutlery", blurb:"Sendok, garpu & pisau stainless.", blurb_en:"Stainless spoons, forks & knives.",
+    image:"",
+    tokopedia:"https://www.tokopedia.com/homewaredepo/etalase/flatware",
+    shopee:"https://shopee.co.id/homewaredepo.bali" },
+];
+
+/* ════════════════════════════════════════════════════════════════════
+   ▲▲▲  CUKUP SAMPAI SINI — sisanya otomatis  ▲▲▲
+   ════════════════════════════════════════════════════════════════════ */
+
+/* ── i18n dictionary ── */
+const I18N = {
+  id:{
+    nav_about:"Tentang", nav_col:"Koleksi", nav_shop:"Belanja Online", nav_contact:"Kontak", nav_shop_btn:"Belanja",
+    hero_h1:"Sesuatu yang istimewa untuk rumahmu.",
+    hero_p:"Tableware kualitas hotel &amp; villa dari Bali — kini di meja makanmu.",
+    hero_cta:"Lihat toko kami",
+    about_label:"Tentang Kami", about_title:"Spesialis homeware dari Bali.",
+    about_p:"Kami percaya setiap rumah layak punya sesuatu yang istimewa. Selama bertahun-tahun kami menyuplai hotel, villa, dan restoran di Bali — kini koleksi yang sama bisa hadir di rumahmu, dengan bentuk, fungsi, dan rasa di setiap detail.",
+    about_more:"Lihat koleksi",
+    band_p:"Desain &amp; kualitas yang mengubah rumah jadi tempat istimewa.",
+    col_label:"Koleksi Kami", col_title:"Belanja per kategori.",
+    shop_label:"Belanja Online", shop_title:"Belanja koleksi kami di sini.",
+    market_sub:"Toko resmi",
+    news_h:"Minta katalog &amp; promo", news_p:"Chat kami di WhatsApp untuk katalog lengkap, cek stok, dan promo terbaru — balasan cepat, langsung dari toko.",
+    news_btn:"Minta katalog via WhatsApp",
+    tr_rating_v:"4,9★", tr_reviews_v:"790+", tr_sold_v:"6.883+", tr_followers_v:"19rb+",
+    tr_rating:"Rating Tokopedia", tr_reviews:"Ulasan", tr_sold:"Terjual", tr_followers:"Pengikut IG",
+    tr_ship:"Kirim ke seluruh Indonesia",
+    m_toko_sub:"Toko Resmi · 4,9★ · 6.883+ terjual", m_wa_sub:"Pesan &amp; tanya stok", m_ig_sub:"@homeware_depo · 19rb pengikut",
+    contact_h:"Punya pertanyaan atau butuh info lebih?",
+    contact_p:"Kami siap membantu — soal produk, stok, pengiriman, atau pesanan jumlah besar untuk hotel &amp; villa.",
+    contact_cta:"Pesan via WhatsApp", map_dir:"Petunjuk Arah",
+    foot_tag:"Jl. Raya Semer No. 55, Kerobokan, Badung, Bali. Kirim ke seluruh Indonesia.",
+    foot_shop:"Belanja", foot_rights:"Semua hak dilindungi.",
+    doc_title:" — Setiap rumah layak punya sesuatu yang istimewa",
+    news_subj:"Newsletter Homeware Depo", news_body:"Halo, saya mau berlangganan newsletter.\nEmail: ",
+  },
+  en:{
+    nav_about:"About", nav_col:"Collections", nav_shop:"Shop Online", nav_contact:"Contact", nav_shop_btn:"Shop",
+    hero_h1:"Something special for your home.",
+    hero_p:"Hotel &amp; villa-grade tableware from Bali — now at your table.",
+    hero_cta:"See our stores",
+    about_label:"About Us", about_title:"Bali's homeware specialists.",
+    about_p:"We believe every home deserves something special. For years we've supplied hotels, villas and restaurants across Bali — now the same collections can live in your home, with form, function and taste in every detail.",
+    about_more:"View collections",
+    band_p:"Design &amp; quality that turn a house into somewhere special.",
+    col_label:"Our Collections", col_title:"Shop by category.",
+    shop_label:"Shop Online", shop_title:"Shop our collections here.",
+    market_sub:"Official store",
+    news_h:"Get our catalog &amp; offers", news_p:"Message us on WhatsApp for the full catalog, stock checks and latest offers — fast replies, straight from the shop.",
+    news_btn:"Get catalog via WhatsApp",
+    tr_rating_v:"4.9★", tr_reviews_v:"790+", tr_sold_v:"6,883+", tr_followers_v:"19k+",
+    tr_rating:"Tokopedia rating", tr_reviews:"Reviews", tr_sold:"Sold", tr_followers:"IG followers",
+    tr_ship:"Shipping across Indonesia",
+    m_toko_sub:"Official Store · 4.9★ · 6,883+ sold", m_wa_sub:"Order &amp; ask stock", m_ig_sub:"@homeware_depo · 19k followers",
+    contact_h:"Questions or need more info?",
+    contact_p:"We're happy to help — products, stock, shipping, or bulk orders for hotels &amp; villas.",
+    contact_cta:"Message on WhatsApp", map_dir:"Get Directions",
+    foot_tag:"Jl. Raya Semer No. 55, Kerobokan, Badung, Bali. Shipping across Indonesia.",
+    foot_shop:"Shop", foot_rights:"All rights reserved.",
+    doc_title:" — Every home deserves something special",
+    news_subj:"Homeware Depo Newsletter", news_body:"Hi, I'd like to subscribe to the newsletter.\nEmail: ",
+  },
+};
+let LANG = "id";
+try{ LANG = localStorage.getItem("hd-lang") || "id"; }catch(e){}
+const t = k => (I18N[LANG] && I18N[LANG][k]) ?? I18N.id[k] ?? "";
+
+function applyI18n(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{ el.innerHTML = t(el.dataset.i18n); });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{ el.placeholder = t(el.dataset.i18nPh); });
+  document.title = BRAND.name + t("doc_title");
+  document.getElementById("lang-id").classList.toggle("on", LANG==="id");
+  document.getElementById("lang-en").classList.toggle("on", LANG==="en");
+  document.getElementById("lang-id").setAttribute("aria-pressed", LANG==="id");
+  document.getElementById("lang-en").setAttribute("aria-pressed", LANG==="en");
+  var _cw=document.getElementById("catalog-wa");
+  if(_cw && BRAND.whatsapp){ var _m=encodeURIComponent(LANG==="en"?"Hi Homeware Depo, can I get your full catalog & prices?":"Halo Homeware Depo, boleh minta katalog lengkap & harga?"); _cw.href="https://wa.me/"+BRAND.whatsapp+"?text="+_m; }
+}
+function setLang(l){
+  LANG = l;
+  try{ localStorage.setItem("hd-lang", l); }catch(e){}
+  applyI18n(); renderGallery(); renderCollections(); renderMarkets(); renderMap();
+}
+
+/* ── brand basics ── */
+document.getElementById("logo-name").textContent = BRAND.name;
+if (BRAND.logoImage){
+  document.getElementById("logo").insertAdjacentHTML("afterbegin", `<img src="${BRAND.logoImage}" alt="">`);
+  document.querySelector(".foot-logo").insertAdjacentHTML("afterbegin",
+    `<img src="${BRAND.logoImage}" alt="" style="width:112px;height:112px;object-fit:contain;border-radius:50%;display:block;margin-bottom:14px">`);
+}
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const setHref = (id,h)=>{ const e=document.getElementById(id); if(e) e.href=h; };
+setHref("f-toko",BRAND.tokopedia); setHref("f-shop",BRAND.shopee); setHref("f-ig",BRAND.instagram);
+setHref("f-mail","mailto:"+BRAND.email);
+document.getElementById("contact-cta").href = BRAND.whatsapp ? ("https://wa.me/"+BRAND.whatsapp) : ("mailto:"+BRAND.email);
+
+// hero image (pakai <picture> supaya HP bisa dapat versi potret sendiri)
+if (BRAND.heroImage){
+  const mob = BRAND.heroImageMobile
+    ? `<source media="(max-width:700px)" srcset="${BRAND.heroImageMobile}">` : "";
+  document.getElementById("hero-media").innerHTML =
+    `<picture>${mob}<img src="${BRAND.heroImage}" alt="Homeware Depo" fetchpriority="high" decoding="async"></picture>`;
+}
+
+// whatsapp float
+if (BRAND.whatsapp){
+  const f = document.getElementById("wa-float");
+  f.href = "https://wa.me/" + BRAND.whatsapp;
+  f.classList.add("on");
+}
+
+// mobile burger menu
+function toggleMenu(btn){
+  const m = document.getElementById("mobile-menu");
+  const open = m.classList.toggle("open");
+  btn.setAttribute("aria-expanded", open);
+}
+document.querySelectorAll("#mobile-menu a").forEach(a=>a.addEventListener("click",()=>{
+  document.getElementById("mobile-menu").classList.remove("open");
+}));
+
+/* ── dynamic sections (language-aware) ── */
+function renderGallery(){
+  document.getElementById("gallery").innerHTML = GALLERY.map(g=>{
+    const cap = (LANG==="en" && g.cap_en) ? g.cap_en : g.cap;
+    const media = g.image
+      ? `<div class="gmedia"><img src="${g.image}" alt="${cap}" loading="lazy"></div>`
+      : `<div class="gmedia"><span class="ph">${cap}</span></div>`;
+    return `<div class="gframe">${media}<div class="cap">${cap}</div></div>`;
+  }).join("");
+}
+
+const tokoIco='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9 5 3h14l2 6M4 9h16v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9Z"/></svg>';
+const shopIco='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2 3 6v14a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V6l-3-4M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>';
+
+function renderCollections(){
+  document.getElementById("col-grid").innerHTML = COLLECTIONS.map((c,i)=>{
+    const name = (LANG==="en" && c.name_en) ? c.name_en : c.name;
+    const blurb = (LANG==="en" && c.blurb_en) ? c.blurb_en : (c.blurb||"");
+    const media = c.image
+      ? `<div class="col-media"><img src="${c.image}" alt="${name}" loading="lazy"></div>`
+      : `<div class="col-media"><div class="ph"><span>${name}</span></div></div>`;
+    let shops="";
+    if(c.tokopedia) shops+=`<a class="shopbtn b-toko" href="${c.tokopedia}" target="_blank" rel="noopener" aria-label="${name} — Tokopedia">${tokoIco} Tokopedia</a>`;
+    if(c.shopee)    shops+=`<a class="shopbtn b-shop" href="${c.shopee}" target="_blank" rel="noopener" aria-label="${name} — Shopee">${shopIco} Shopee</a>`;
+    return `<article class="col-card">${media}
+      <div class="col-name serif">${name}</div>
+      <div class="col-blurb">${blurb}</div>
+      <div class="col-shops">${shops}</div></article>`;
+  }).join("");
+}
+
+function renderMarkets(){
+  const waMsg=encodeURIComponent(LANG==="en"?"Hi Homeware Depo, I'd like to ask about a product.":"Halo Homeware Depo, saya mau tanya produk.");
+  const markets=[
+    { name:"Tokopedia", sub:t("m_toko_sub"), href:BRAND.tokopedia,
+      ico:'<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#89a15a" stroke-width="1.7"><path d="M3 9 5 3h14l2 6M4 9h16v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9ZM9 13h6"/></svg>' },
+    { name:"Shopee", sub:t("market_sub"), href:BRAND.shopee,
+      ico:'<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#89a15a" stroke-width="1.7"><path d="M6 2 3 6v14a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V6l-3-4M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>' },
+    { name:"WhatsApp", sub:t("m_wa_sub"), href: BRAND.whatsapp ? ("https://wa.me/"+BRAND.whatsapp+"?text="+waMsg) : "",
+      ico:'<svg width="34" height="34" viewBox="0 0 24 24" fill="#25d366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z"/></svg>' },
+    { name:"Instagram", sub:t("m_ig_sub"), href:BRAND.instagram,
+      ico:'<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#89a15a" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#89a15a" stroke="none"/></svg>' },
+  ];
+  document.getElementById("market-grid").innerHTML = markets.filter(m=>m.href).map(m=>
+    `<a class="market" href="${m.href}" target="_blank" rel="noopener">
+       <div class="ico">${m.ico}</div>
+       <div class="mname serif">${m.name}</div>
+       <div class="msub">${m.sub}</div>
+     </a>`).join("");
+}
+
+// peta lokasi toko + tombol petunjuk arah
+function renderMap(){
+  if(!BRAND.address) return;
+  const q = encodeURIComponent(BRAND.name + ", " + BRAND.address);
+  document.getElementById("map-box").innerHTML =
+    `<iframe src="https://maps.google.com/maps?q=${q}&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${BRAND.name} — Map"></iframe>
+     <a class="map-dir" href="https://www.google.com/maps/dir/?api=1&destination=${q}" target="_blank" rel="noopener">
+       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+       ${t("map_dir")}</a>`;
+}
+
+// newsletter → opens email (no backend needed)
+function subscribe(){
+  const v=(document.getElementById("news-email").value||"").trim();
+  const subj=encodeURIComponent(t("news_subj"));
+  const body=encodeURIComponent(t("news_body")+v);
+  window.location.href=`mailto:${BRAND.email}?subject=${subj}&body=${body}`;
+}
+
+// socials
+const ig='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>';
+const fb='<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 0 1 1-1Z"/></svg>';
+const tt='<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.1 1.6 3.7 3.8 4v3c-1.4 0-2.7-.4-3.8-1.1V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.1A3 3 0 1 0 13 15V3h3Z"/></svg>';
+const socialList=[
+  {href:BRAND.instagram,svg:ig,label:"Instagram"},
+  {href:BRAND.facebook,svg:fb,label:"Facebook"},
+  {href:BRAND.tiktok,svg:tt,label:"TikTok"},
+].filter(s=>s.href);
+document.getElementById("socials").innerHTML = socialList.map(s=>
+  `<a href="${s.href}" target="_blank" rel="noopener" aria-label="${s.label}">${s.svg}</a>`).join("");
+
+/* ── boot ── */
+applyI18n(); renderGallery(); renderCollections(); renderMarkets(); renderMap();
+
+// scroll reveal
+if('IntersectionObserver' in window){
+  const obs=new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); obs.unobserve(e.target);} }),{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+}else{
+  document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
+}
+</script>
+</body>
+</html>
