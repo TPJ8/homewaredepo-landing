@@ -237,15 +237,18 @@
   .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
   .contact h3{ font-family:'Fraunces',serif; font-weight:300; font-size:clamp(1.8rem,4vw,2.8rem); line-height:1.1; }
   .contact p{ color:var(--ink-soft); margin-top:14px; max-width:42ch; }
-  .contact .cta{ display:inline-flex; align-items:center; gap:10px; margin-top:24px; background:var(--sage-btn); color:#fff; padding:15px 30px; border-radius:999px; font-size:.76rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; transition:transform .15s,background .15s; }
+  .contact-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+  .contact .cta{ display:inline-flex; align-items:center; justify-content:center; gap:10px; background:var(--sage-btn); color:#fff; padding:15px 30px; border-radius:999px; font-size:.76rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; transition:transform .15s,background .15s,border-color .15s; }
   .contact .cta:hover{ transform:translateY(-2px); background:#516134; }
+  .contact .cta.secondary{ background:transparent; color:var(--sage-btn); border:1px solid var(--sage-btn); }
+  .contact .cta.secondary:hover{ background:var(--sage-tint); border-color:#516134; color:#516134; }
   .contact-media{ aspect-ratio:16/10; max-width:520px; justify-self:end; width:100%; border-radius:20px; overflow:hidden; background:linear-gradient(140deg,var(--stone-a),var(--stone-b)); display:grid; place-items:center; position:relative; border:1px solid var(--line); }
   @media (max-width:760px){ .contact-media{ max-width:100%; justify-self:stretch; aspect-ratio:16/11; } }
   .contact-media .ph{ font-family:'Fraunces',serif; color:rgba(247,242,233,.8); font-size:1.4rem; }
   .contact-media iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; filter:saturate(.5) contrast(.97) brightness(1.02); }
   .map-dir{ position:absolute; left:50%; bottom:14px; transform:translateX(-50%); z-index:2; display:inline-flex; align-items:center; gap:8px; background:var(--sage-btn); color:#fff; padding:11px 20px; border-radius:999px; font-size:.74rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; box-shadow:0 4px 14px rgba(20,22,15,.25); transition:background .15s,transform .15s; white-space:nowrap; }
   .map-dir:hover{ background:#516134; transform:translateX(-50%) translateY(-2px); }
-  @media (max-width:760px){ .contact-grid{ grid-template-columns:1fr; gap:28px; } }
+  @media (max-width:760px){ .contact-grid{ grid-template-columns:1fr; gap:28px; } .contact-actions{ flex-direction:column; align-items:flex-start; } .contact .cta{ width:min(100%,320px); } }
 
   /* ── Footer ── */
   footer{ background:var(--paper); color:var(--ink); padding:64px 0 40px; border-top:1px solid var(--line); }
@@ -402,9 +405,12 @@
     <div class="contact">
       <h3 class="serif" data-i18n="contact_h">Punya pertanyaan atau butuh info lebih?</h3>
       <p data-i18n="contact_p">Kami siap membantu — soal produk, stok, pengiriman, atau pesanan jumlah besar untuk hotel &amp; villa.</p>
-      <a class="cta" id="contact-cta" href="#"><span data-i18n="contact_cta">Hubungi kami</span>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <div class="contact-actions">
+        <a class="cta" id="contact-cta" href="#"><span data-i18n="contact_cta">Hubungi kami</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="cta secondary" id="contact-email" href="#"><span data-i18n="contact_email">Email kami</span></a>
+      </div>
     </div>
     <div class="contact-media" id="map-box"><span class="ph">Homeware Depo</span></div>
   </div>
@@ -529,7 +535,7 @@ const I18N = {
     m_toko_sub:"Toko resmi · 4,9★ · 6.883+ terjual", m_wa_sub:"Minta katalog &amp; tanya stok", m_ig_sub:"Inspirasi meja makan · 19rb pengikut",
     contact_h:"Punya pertanyaan atau butuh info lebih?",
     contact_p:"Kami siap membantu soal produk, stok, pengiriman, atau pesanan jumlah besar untuk villa, restoran, dan hotel.",
-    contact_cta:"Pesan via WhatsApp", map_dir:"Petunjuk Arah",
+    contact_cta:"Pesan via WhatsApp", contact_email:"Email kami", map_dir:"Petunjuk Arah",
     foot_tag:"Jl. Raya Semer No. 55, Kerobokan, Badung, Bali. Kirim ke seluruh Indonesia.",
     foot_shop:"Belanja", foot_rights:"Semua hak dilindungi.",
     doc_title:" — Setiap rumah layak punya sesuatu yang istimewa",
@@ -556,7 +562,7 @@ const I18N = {
     m_toko_sub:"Official store · 4.9★ · 6,883+ sold", m_wa_sub:"Get catalog &amp; ask stock", m_ig_sub:"Table styling inspiration · 19k followers",
     contact_h:"Questions or need more info?",
     contact_p:"We're happy to help with products, stock, shipping, or bulk orders for villas, restaurants, and hotels.",
-    contact_cta:"Message on WhatsApp", map_dir:"Get Directions",
+    contact_cta:"Message on WhatsApp", contact_email:"Email us", map_dir:"Get Directions",
     foot_tag:"Jl. Raya Semer No. 55, Kerobokan, Badung, Bali. Shipping across Indonesia.",
     foot_shop:"Shop", foot_rights:"All rights reserved.",
     doc_title:" — Every home deserves something special",
@@ -605,6 +611,7 @@ const setHref = (id,h)=>{ const e=document.getElementById(id); if(e) e.href=h; }
 setHref("f-toko",BRAND.tokopedia); setHref("f-shop",BRAND.shopee); setHref("f-ig",BRAND.instagram);
 setHref("f-mail","mailto:"+BRAND.email);
 document.getElementById("contact-cta").href = BRAND.whatsapp ? ("https://wa.me/"+BRAND.whatsapp) : ("mailto:"+BRAND.email);
+document.getElementById("contact-email").href = "mailto:"+BRAND.email;
 document.getElementById("hero-primary").href = BRAND.tokopedia || "#belanja";
 document.getElementById("hero-secondary").href = BRAND.whatsapp
   ? ("https://wa.me/"+BRAND.whatsapp+"?text="+encodeURIComponent("Halo Homeware Depo, boleh minta katalog lengkap & harga?"))
