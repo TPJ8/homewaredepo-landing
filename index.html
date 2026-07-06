@@ -6,8 +6,8 @@
 <meta name="google" content="notranslate" />
 <title>Homeware Depo — Tableware &amp; Homeware Berkualitas dari Bali</title>
 <meta name="description" content="Homeware Depo — tableware &amp; homeware kualitas hotel &amp; villa dari Bali. Piring, mangkuk, gelas &amp; cutlery. 4,9★ · 6.883+ terjual. Belanja di Tokopedia, Shopee &amp; WhatsApp." />
-<link rel="icon" type="image/png" href="photos-web/logo-badge.png" />
-<link rel="apple-touch-icon" href="photos-web/logo-badge.png" />
+<link rel="icon" type="image/png" href="photos-web/favicon.png" />
+<link rel="apple-touch-icon" href="photos-web/favicon.png" />
 <!-- CATATAN DEPLOY ZOHO: tag OG/meta di bawah HARUS diisi lewat Page SEO settings Zoho,
      bukan lewat widget HTML — <meta> di dalam body widget diabaikan browser. -->
 <meta property="og:type" content="website" />
@@ -48,7 +48,7 @@
     --sage-dark:#75894c;   /* hover state */
     --sage-soft:#b5ba90;   /* logo secondary green */
     --sage-tint:#e9edda;   /* light sage wash for bands */
-    --sage-btn:#5f7040;    /* darker green for white-text buttons (AA) */
+    --sage-btn:#5c7639;    /* darker green for white-text buttons (AA) */
     --deep:#262b1f;        /* reserved (no longer used for big blocks) */
     --stone-a:#b5ba90;     /* placeholder media gradient */
     --stone-b:#89a15a;
@@ -121,7 +121,7 @@
   .hero-actions{ display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:30px; }
   .hero-cta{ display:inline-flex; align-items:center; gap:11px; background:var(--sage-btn); color:#fff; padding:15px 30px; border-radius:999px; font-size:.78rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; transition:transform .15s,background .15s,border-color .15s; }
   .hero-cta:hover{ transform:translateY(-2px); background:#516134; }
-  .hero-cta.secondary{ background:rgba(251,251,245,.12); border:1px solid rgba(251,251,245,.72); color:#fff; }
+  .hero-cta.secondary{ background:rgba(30,32,24,.34); border:1px solid rgba(251,251,245,.7); color:#fff; }
   .hero-cta.secondary:hover{ background:rgba(251,251,245,.2); border-color:#fff; }
   .hero-proof{ margin-top:18px; color:rgba(251,251,245,.9); font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; text-wrap:balance; }
 
@@ -212,10 +212,10 @@
   .shoprow .sec-label{ color:var(--sage-dark); }
   .shoprow .sec-title{ color:var(--ink); }
   .market-grid{ margin-top:48px; display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px; }
-  .market{ background:#fff; border:1px solid var(--line); border-radius:20px; padding:34px 24px; text-align:center; transition:box-shadow .18s,transform .18s; }
+  .market{ background:#fff; border:1px solid var(--line); border-radius:18px; padding:34px 24px; text-align:center; transition:box-shadow .18s,transform .18s; }
   .market:hover{ box-shadow:0 10px 30px rgba(60,68,40,.1); transform:translateY(-3px); }
-  .market.primary{ border-color:var(--sage); box-shadow:0 10px 28px rgba(60,68,40,.08); }
-  .market.whatsapp{ border-color:rgba(37,211,102,.38); }
+  .market.primary{ border-color:var(--sage); box-shadow:0 14px 32px rgba(60,68,40,.14); }
+  .market.whatsapp{ }
   .market .ico{ display:grid; place-items:center; margin-bottom:16px; }
   .market .mname{ font-family:'Fraunces',serif; font-size:1.3rem; }
   .market .msub{ font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); margin-top:6px; }
@@ -242,10 +242,10 @@
   .contact .cta:hover{ transform:translateY(-2px); background:#516134; }
   .contact .cta.secondary{ background:transparent; color:var(--sage-btn); border:1px solid var(--sage-btn); }
   .contact .cta.secondary:hover{ background:var(--sage-tint); border-color:#516134; color:#516134; }
-  .contact-media{ aspect-ratio:16/10; max-width:520px; justify-self:end; width:100%; border-radius:20px; overflow:hidden; background:linear-gradient(140deg,var(--stone-a),var(--stone-b)); display:grid; place-items:center; position:relative; border:1px solid var(--line); }
+  .contact-media{ aspect-ratio:16/10; max-width:520px; justify-self:end; width:100%; border-radius:18px; overflow:hidden; background:linear-gradient(140deg,var(--stone-a),var(--stone-b)); display:grid; place-items:center; position:relative; border:1px solid var(--line); }
   @media (max-width:760px){ .contact-media{ max-width:100%; justify-self:stretch; aspect-ratio:16/11; } }
   .contact-media .ph{ font-family:'Fraunces',serif; color:rgba(247,242,233,.8); font-size:1.4rem; }
-  .contact-media iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; filter:saturate(.5) contrast(.97) brightness(1.02); }
+  .contact-media iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; filter:saturate(.42) contrast(.97) brightness(1.02); }
   .map-dir{ position:absolute; left:50%; bottom:14px; transform:translateX(-50%); z-index:2; display:inline-flex; align-items:center; gap:8px; background:var(--sage-btn); color:#fff; padding:11px 20px; border-radius:999px; font-size:.74rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; box-shadow:0 4px 14px rgba(20,22,15,.25); transition:background .15s,transform .15s; white-space:nowrap; }
   .map-dir:hover{ background:#516134; transform:translateX(-50%) translateY(-2px); }
   @media (max-width:760px){ .contact-grid{ grid-template-columns:1fr; gap:28px; } .contact-actions{ flex-direction:column; align-items:flex-start; } .contact .cta{ width:min(100%,320px); } }
@@ -293,7 +293,7 @@
         <button id="lang-en" data-lang-btn="en" onclick="setLang('en')">EN</button>
       </div>
     </div>
-    <button class="burger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu(this)">
+    <button class="burger" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu(this)">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
   </div>
@@ -740,7 +740,7 @@ if('IntersectionObserver' in window){
 
 function revealAndScrollHashTarget(){
   if(!window.location.hash) return;
-  const target=document.querySelector(window.location.hash);
+  var target; try{ target=document.querySelector(window.location.hash); }catch(e){ return; }
   if(!target) return;
   if(target.classList.contains("reveal")) target.classList.add("in");
   target.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
