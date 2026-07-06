@@ -271,6 +271,8 @@
   :target.reveal{ opacity:1; transform:none; }
   @media (prefers-reduced-motion:reduce){ *{ scroll-behavior:auto !important; animation:none !important; transition:none !important; } .reveal{ opacity:1; transform:none; } }
   :focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+  /* fallback: old WebView (<81) has no aspect-ratio -> give media boxes real height so images don't collapse */
+  @supports not (aspect-ratio: 1){ .gmedia{ height:320px; } .col-media{ height:300px; } .contact-media{ height:260px; } }
 </style>
 </head>
 <body class="notranslate" translate="no">
@@ -323,9 +325,9 @@
       <a class="hero-cta" id="hero-primary" href="#belanja"><span data-i18n="hero_cta">Belanja di Tokopedia</span>
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a class="hero-cta secondary" id="hero-secondary" href="#belanja"><span data-i18n="hero_cta_2">Minta katalog WhatsApp</span></a>
+      <a class="hero-cta secondary" id="hero-secondary" href="#belanja"><span data-i18n="hero_cta_2">Minta katalog via WhatsApp</span></a>
     </div>
-    <div class="hero-proof" data-i18n="hero_proof">4,9★ Tokopedia · 6.883+ terjual · Kirim seluruh Indonesia</div>
+    <div class="hero-proof" data-i18n="hero_proof">4,9★ Tokopedia · 6.883+ terjual · Kirim ke seluruh Indonesia</div>
   </div>
 </section>
 
@@ -405,7 +407,7 @@
 <section id="kontak">
   <div class="wrap reveal contact-grid">
     <div class="contact">
-      <h3 class="serif" data-i18n="contact_h">Punya pertanyaan atau butuh info lebih?</h3>
+      <h3 class="serif" data-i18n="contact_h">Punya pertanyaan atau butuh info lebih lengkap?</h3>
       <p data-i18n="contact_p">Kami siap membantu — soal produk, stok, pengiriman, atau pesanan jumlah besar untuk hotel &amp; villa.</p>
       <div class="contact-actions">
         <a class="cta" id="contact-cta" href="#"><span data-i18n="contact_cta">Hubungi kami</span>
@@ -520,8 +522,8 @@ const I18N = {
     nav_about:"Tentang", nav_col:"Koleksi", nav_shop:"Belanja Online", nav_contact:"Kontak", nav_shop_btn:"Belanja",
     hero_h1:"Perlengkapan meja makan kualitas hotel &amp; villa dari Bali.",
     hero_p:"Piring, mangkuk, gelas, dan alat makan untuk rumah, villa, restoran, dan hampers — siap kirim ke seluruh Indonesia.",
-    hero_cta:"Belanja di Tokopedia", hero_cta_2:"Minta katalog WhatsApp",
-    hero_proof:"4,9★ Tokopedia · 6.883+ terjual · Kirim seluruh Indonesia",
+    hero_cta:"Belanja di Tokopedia", hero_cta_2:"Minta katalog via WhatsApp",
+    hero_proof:"4,9★ Tokopedia · 6.883+ terjual · Kirim ke seluruh Indonesia",
     about_label:"Tentang Kami", about_title:"Spesialis homeware dari Bali.",
     about_p:"Kami percaya setiap rumah layak punya sesuatu yang istimewa. Selama bertahun-tahun kami menyuplai hotel, villa, dan restoran di Bali — kini koleksi yang sama bisa hadir di rumahmu, dengan bentuk, fungsi, dan rasa di setiap detail.",
     about_more:"Lihat koleksi",
@@ -535,7 +537,7 @@ const I18N = {
     tr_rating:"Rating Tokopedia", tr_reviews:"Ulasan", tr_sold:"Terjual", tr_followers:"Pengikut IG",
     tr_ship:"Kirim ke seluruh Indonesia",
     m_toko_sub:"Toko resmi · 4,9★ · 6.883+ terjual", m_wa_sub:"Minta katalog &amp; tanya stok", m_ig_sub:"Inspirasi meja makan · 19rb pengikut",
-    contact_h:"Punya pertanyaan atau butuh info lebih?",
+    contact_h:"Punya pertanyaan atau butuh info lebih lengkap?",
     contact_p:"Kami siap membantu soal produk, stok, pengiriman, atau pesanan jumlah besar untuk villa, restoran, dan hotel.",
     contact_cta:"Pesan via WhatsApp", contact_email:"Email kami", map_dir:"Petunjuk Arah",
     foot_tag:"Jl. Raya Semer No. 55, Kerobokan, Badung, Bali. Kirim ke seluruh Indonesia.",
@@ -547,22 +549,22 @@ const I18N = {
     nav_about:"About", nav_col:"Collections", nav_shop:"Shop Online", nav_contact:"Contact", nav_shop_btn:"Shop",
     hero_h1:"Hotel &amp; villa-grade tableware from Bali.",
     hero_p:"Plates, bowls, glassware, and cutlery for homes, villas, restaurants, and hampers — ready to ship across Indonesia.",
-    hero_cta:"Shop Tokopedia", hero_cta_2:"Get WhatsApp catalog",
+    hero_cta:"Shop Tokopedia", hero_cta_2:"Get catalog on WhatsApp",
     hero_proof:"4.9★ Tokopedia · 6,883+ sold · Ships across Indonesia",
     about_label:"About Us", about_title:"Bali's homeware specialists.",
-    about_p:"We believe every home deserves something special. For years we've supplied hotels, villas and restaurants across Bali — now the same collections can live in your home, with form, function and taste in every detail.",
+    about_p:"We believe every home deserves something special. For years we've supplied hotels, villas, and restaurants across Bali — now the same collections can live in your home, with form, function, and taste in every detail.",
     about_more:"View collections",
     band_p:"Design &amp; quality that turn a house into somewhere special.",
     col_label:"Our Collections", col_title:"Shop by category.",
     shop_label:"Shop Online", shop_title:"Shop through our official stores.",
     market_sub:"Official store",
-    news_h:"Get our catalog &amp; offers", news_p:"Message us on WhatsApp for the full catalog, stock checks and latest offers — fast replies, straight from the shop.",
+    news_h:"Get our catalog &amp; offers", news_p:"Message us on WhatsApp for the full catalog, stock checks, and latest offers — fast replies, straight from the shop.",
     news_btn:"Get catalog via WhatsApp",
     tr_rating_v:"4.9★", tr_reviews_v:"790+", tr_sold_v:"6,883+", tr_followers_v:"19k+",
     tr_rating:"Tokopedia rating", tr_reviews:"Reviews", tr_sold:"Sold", tr_followers:"IG followers",
     tr_ship:"Shipping across Indonesia",
-    m_toko_sub:"Official store · 4.9★ · 6,883+ sold", m_wa_sub:"Get catalog &amp; ask stock", m_ig_sub:"Table styling inspiration · 19k followers",
-    contact_h:"Questions or need more info?",
+    m_toko_sub:"Official store · 4.9★ · 6,883+ sold", m_wa_sub:"Get catalog &amp; check stock", m_ig_sub:"Table styling inspiration · 19k followers",
+    contact_h:"Have a question or need more info?",
     contact_p:"We're happy to help with products, stock, shipping, or bulk orders for villas, restaurants, and hotels.",
     contact_cta:"Message on WhatsApp", contact_email:"Email us", map_dir:"Get Directions",
     foot_tag:"Jl. Raya Semer No. 55, Kerobokan, Badung, Bali. Shipping across Indonesia.",
@@ -573,7 +575,7 @@ const I18N = {
 };
 let LANG = "id";
 try{ LANG = localStorage.getItem("hd-lang") || "id"; }catch(e){}
-const t = k => (I18N[LANG] && I18N[LANG][k]) ?? I18N.id[k] ?? "";
+const t = function(k){ var v=(I18N[LANG] && I18N[LANG][k]); if(v==null) v=I18N.id[k]; return v==null?"":v; };
 
 function applyI18n(){
   document.documentElement.lang = LANG;
@@ -705,14 +707,6 @@ function renderMap(){
      <a class="map-dir" href="https://www.google.com/maps/dir/?api=1&destination=${q}" target="_blank" rel="noopener">
        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg>
        ${t("map_dir")}</a>`;
-}
-
-// newsletter → opens email (no backend needed)
-function subscribe(){
-  const v=(document.getElementById("news-email").value||"").trim();
-  const subj=encodeURIComponent(t("news_subj"));
-  const body=encodeURIComponent(t("news_body")+v);
-  window.location.href=`mailto:${BRAND.email}?subject=${subj}&body=${body}`;
 }
 
 // footer quick actions
