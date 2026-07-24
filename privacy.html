@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kebijakan Privasi · Homeware Depo</title>
+<meta name="description" content="Kebijakan Privasi Homeware Depo — bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda. Privacy Policy for Homeware Depo." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://homewaredepo.com/privacy.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bone:#f1f2e9; --paper:#f8f9f2; --ink:#2a2e24; --ink-soft:#5f6455;
+    --line:#e0e3d2; --sage:#89a15a; --sage-dark:#75894c; --sage-soft:#b5ba90;
+    --sage-tint:#e9edda; --sage-btn:#5c7639;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Plus Jakarta Sans',system-ui,sans-serif; background:var(--bone); color:var(--ink); line-height:1.7; -webkit-font-smoothing:antialiased; }
+  a{ color:var(--sage-btn); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  .serif{ font-family:'Fraunces',Georgia,serif; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 24px; }
+
+  /* Header */
+  header{ position:sticky; top:0; z-index:20; background:rgba(241,242,233,.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  .head-row{ display:flex; align-items:center; justify-content:space-between; height:66px; }
+  .logo{ font-family:'Fraunces',serif; font-weight:500; font-size:1.4rem; letter-spacing:.02em; color:var(--ink); display:inline-flex; align-items:center; gap:10px; }
+  .logo:hover{ text-decoration:none; }
+  .logo-seal{ width:30px; height:30px; border-radius:50%; background:var(--sage); display:grid; place-items:center; color:#fff; font-size:.7rem; font-weight:700; font-family:'Plus Jakarta Sans',sans-serif; letter-spacing:.02em; }
+  .lang-toggle{ display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:#fff; }
+  .lang-toggle button{ border:0; background:none; padding:8px 14px; font:inherit; font-size:.72rem; font-weight:700; letter-spacing:.1em; cursor:pointer; color:var(--ink-soft); transition:background .15s,color .15s; }
+  .lang-toggle button.on{ background:var(--sage-soft); color:var(--ink); }
+
+  /* Hero */
+  .p-hero{ padding:64px 0 34px; border-bottom:1px solid var(--line); }
+  .eyebrow{ font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--sage-btn); margin-bottom:14px; }
+  .p-hero h1{ font-family:'Fraunces',serif; font-weight:300; font-size:clamp(2.1rem,5vw,3.1rem); line-height:1.06; letter-spacing:-.01em; }
+  .updated{ margin-top:16px; font-size:.86rem; color:var(--ink-soft); }
+
+  /* Body */
+  main{ padding:40px 0 20px; }
+  .lead{ font-size:1.05rem; color:var(--ink-soft); margin-bottom:36px; }
+  section.block{ margin-bottom:34px; }
+  section.block h2{ font-family:'Fraunces',serif; font-weight:400; font-size:1.5rem; letter-spacing:-.01em; margin-bottom:12px; padding-top:8px; }
+  section.block p{ margin-bottom:12px; }
+  section.block ul{ margin:0 0 12px 20px; }
+  section.block li{ margin-bottom:7px; }
+  .callout{ background:var(--sage-tint); border:1px solid var(--line); border-radius:14px; padding:20px 22px; margin:8px 0 20px; }
+  .callout p{ margin-bottom:6px; }
+  .callout p:last-child{ margin-bottom:0; }
+  .contact-card{ background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:24px 26px; margin-top:8px; }
+  .contact-card .biz{ font-family:'Fraunces',serif; font-size:1.15rem; margin-bottom:8px; }
+  .contact-card div{ margin-bottom:5px; font-size:.95rem; }
+  .disclaimer{ font-size:.82rem; color:var(--ink-soft); font-style:italic; border-top:1px solid var(--line); padding-top:20px; margin-top:12px; }
+
+  /* Footer */
+  footer{ border-top:1px solid var(--line); padding:28px 0; margin-top:30px; }
+  .foot-row{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  .foot-row a{ color:var(--ink-soft); font-size:.8rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+  .copy{ font-size:.82rem; color:var(--ink-soft); }
+
+  [data-lang="en"]{ display:none; }
+  html[lang="en"] [data-lang="id"]{ display:none; }
+  html[lang="en"] [data-lang="en"]{ display:revert; }
+
+  @media(max-width:560px){
+    .p-hero{ padding:44px 0 28px; }
+    main{ padding:30px 0 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap head-row">
+    <a class="logo" href="/"><span class="logo-seal" translate="no">HD</span><span translate="no">Homeware Depo</span></a>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button id="lg-id" class="on" onclick="setLang('id')">ID</button>
+      <button id="lg-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="p-hero">
+  <div class="wrap">
+    <div class="eyebrow"><span data-lang="id">Privasi</span><span data-lang="en">Privacy</span></div>
+    <h1><span data-lang="id">Kebijakan Privasi</span><span data-lang="en">Privacy Policy</span></h1>
+    <div class="updated">
+      <span data-lang="id">Terakhir diperbarui: 24 Juli 2026</span>
+      <span data-lang="en">Last updated: 24 July 2026</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead">
+      <span data-lang="id">Kebijakan ini menjelaskan bagaimana Homeware Depo mengumpulkan, menggunakan, dan melindungi informasi Anda saat Anda mengunjungi homewaredepo.com. Kami menjaga data secukupnya — hanya yang diperlukan untuk menjalankan toko dan meningkatkan pengalaman Anda.</span>
+      <span data-lang="en">This policy explains how Homeware Depo collects, uses, and protects your information when you visit homewaredepo.com. We keep data collection minimal — only what we need to run the shop and improve your experience.</span>
+    </p>
+
+    <section class="block">
+      <h2><span data-lang="id">1. Informasi yang kami kumpulkan</span><span data-lang="en">1. Information we collect</span></h2>
+      <p><span data-lang="id">Situs ini adalah halaman informasi. Kami <strong>tidak</strong> meminta Anda membuat akun, dan kami tidak memproses pembayaran di situs ini — semua transaksi terjadi di Tokopedia, Shopee, atau melalui WhatsApp. Kami mengumpulkan:</span><span data-lang="en">This site is an informational landing page. We do <strong>not</strong> ask you to create an account, and we do not process payments here — all transactions happen on Tokopedia, Shopee, or via WhatsApp. We collect:</span></p>
+      <ul>
+        <li><span data-lang="id"><strong>Data analitik & penggunaan</strong> — halaman yang dilihat, perkiraan lokasi (negara/kota), jenis perangkat, browser, dan bagaimana Anda tiba di situs. Dikumpulkan melalui Zoho PageSense (lihat Cookie di bawah).</span><span data-lang="en"><strong>Analytics & usage data</strong> — pages viewed, approximate location (country/city), device type, browser, and how you arrived at the site. Collected via Zoho PageSense (see Cookies below).</span></li>
+        <li><span data-lang="id"><strong>Informasi yang Anda berikan langsung</strong> — jika Anda menghubungi kami lewat WhatsApp atau email, kami menerima nama, nomor, dan isi pesan yang Anda kirim.</span><span data-lang="en"><strong>Information you give us directly</strong> — if you contact us on WhatsApp or by email, we receive the name, number, and message content you send.</span></li>
+      </ul>
+      <p><span data-lang="id">Kami <strong>tidak</strong> mengumpulkan data kartu, nomor identitas, atau data pembayaran apa pun di situs ini.</span><span data-lang="en">We do <strong>not</strong> collect card details, ID numbers, or any payment data on this site.</span></p>
+    </section>
+
+    <section class="block">
+      <h2><span data-lang="id">2. Cookie & analitik</span><span data-lang="en">2. Cookies & analytics</span></h2>
+      <p><span data-lang="id">Kami menggunakan Zoho PageSense untuk memahami bagaimana pengunjung menggunakan situs sehingga kami bisa memperbaikinya. Layanan ini menempatkan cookie di browser Anda untuk mengenali kunjungan berulang dan menyusun statistik anonim.</span><span data-lang="en">We use Zoho PageSense to understand how visitors use the site so we can improve it. It places cookies in your browser to recognise return visits and compile anonymous statistics.</span></p>
+      <div class="callout">
+        <p><span data-lang="id"><strong>Pilihan Anda:</strong> Saat pertama kali berkunjung, sebuah banner muncul di bagian bawah layar. Klik <strong>“Deny”</strong> untuk menolak cookie analitik — situs tetap berfungsi penuh. Anda juga bisa menghapus atau memblokir cookie kapan saja lewat pengaturan browser.</span><span data-lang="en"><strong>Your choice:</strong> On your first visit a banner appears at the bottom of the screen. Click <strong>“Deny”</strong> to refuse analytics cookies — the site still works fully. You can also clear or block cookies anytime in your browser settings.</span></p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2><span data-lang="id">3. Bagaimana kami menggunakan data</span><span data-lang="en">3. How we use your data</span></h2>
+      <ul>
+        <li><span data-lang="id">Menjalankan dan meningkatkan situs serta menampilkan produk kami.</span><span data-lang="en">To operate and improve the site and showcase our products.</span></li>
+        <li><span data-lang="id">Menjawab pertanyaan Anda saat Anda menghubungi kami.</span><span data-lang="en">To respond to your enquiries when you contact us.</span></li>
+        <li><span data-lang="id">Memahami tren kunjungan secara agregat (bukan untuk mengidentifikasi Anda pribadi).</span><span data-lang="en">To understand visit trends in aggregate (not to identify you personally).</span></li>
+      </ul>
+      <p><span data-lang="id">Kami <strong>tidak menjual</strong> dan tidak menyewakan data Anda kepada pihak ketiga mana pun.</span><span data-lang="en">We do <strong>not sell</strong> or rent your data to any third party.</span></p>
+    </section>
+
+    <section class="block">
+      <h2><span data-lang="id">4. Layanan pihak ketiga</span><span data-lang="en">4. Third-party services</span></h2>
+      <p><span data-lang="id">Saat Anda mengeklik tautan belanja kami, Anda berpindah ke platform pihak ketiga yang memiliki kebijakan privasinya sendiri:</span><span data-lang="en">When you click our shopping links you move to third-party platforms, each with its own privacy policy:</span></p>
+      <ul>
+        <li><strong>Tokopedia</strong>, <strong>Shopee</strong> — <span data-lang="id">saat Anda berbelanja atau membuat pesanan.</span><span data-lang="en">when you shop or place an order.</span></li>
+        <li><strong>WhatsApp</strong> (Meta) — <span data-lang="id">saat Anda mengobrol dengan kami.</span><span data-lang="en">when you chat with us.</span></li>
+        <li><strong>Instagram</strong> (Meta), <strong>Zoho PageSense</strong> — <span data-lang="id">untuk konten sosial dan analitik.</span><span data-lang="en">for social content and analytics.</span></li>
+      </ul>
+      <p><span data-lang="id">Kami menyarankan Anda membaca kebijakan privasi platform tersebut. Kami tidak mengontrol bagaimana mereka menangani data Anda.</span><span data-lang="en">We encourage you to read those platforms’ privacy policies. We do not control how they handle your data.</span></p>
+    </section>
+
+    <section class="block">
+      <h2><span data-lang="id">5. Penyimpanan & keamanan</span><span data-lang="en">5. Retention & security</span></h2>
+      <p><span data-lang="id">Data analitik disimpan dalam bentuk agregat selama diperlukan untuk keperluan pelaporan. Pesan yang Anda kirim disimpan hanya selama diperlukan untuk melayani Anda. Kami mengambil langkah wajar untuk menjaga keamanan informasi Anda.</span><span data-lang="en">Analytics data is kept in aggregate form for as long as needed for reporting. Messages you send are kept only as long as needed to serve you. We take reasonable steps to keep your information secure.</span></p>
+    </section>
+
+    <section class="block">
+      <h2><span data-lang="id">6. Hak Anda</span><span data-lang="en">6. Your rights</span></h2>
+      <p><span data-lang="id">Sesuai Undang-Undang Perlindungan Data Pribadi Republik Indonesia (UU No. 27 Tahun 2022), Anda berhak mengakses, memperbaiki, atau meminta penghapusan data pribadi yang kami miliki tentang Anda, serta menolak pelacakan analitik. Untuk menggunakan hak ini, hubungi kami lewat detail di bawah.</span><span data-lang="en">Under Indonesia’s Personal Data Protection Law (Law No. 27 of 2022), you have the right to access, correct, or request deletion of the personal data we hold about you, and to opt out of analytics tracking. To exercise these rights, contact us using the details below.</span></p>
+    </section>
+
+    <section class="block">
+      <h2><span data-lang="id">7. Perubahan kebijakan</span><span data-lang="en">7. Changes to this policy</span></h2>
+      <p><span data-lang="id">Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Tanggal “terakhir diperbarui” di atas akan mencerminkan versi terbaru.</span><span data-lang="en">We may update this policy from time to time. The “last updated” date above reflects the current version.</span></p>
+    </section>
+
+    <section class="block">
+      <h2><span data-lang="id">8. Hubungi kami</span><span data-lang="en">8. Contact us</span></h2>
+      <p><span data-lang="id">Untuk pertanyaan apa pun tentang privasi atau data Anda:</span><span data-lang="en">For any question about your privacy or data:</span></p>
+      <div class="contact-card">
+        <div class="biz serif" translate="no">Homeware Depo</div>
+        <div translate="no">Jl. Raya Semer No. 55, Kerobokan, Badung, Bali</div>
+        <div>Email: <a href="mailto:info@homewaredepo.com" translate="no">info@homewaredepo.com</a></div>
+        <div>WhatsApp: <a href="https://wa.me/6287814360273" target="_blank" rel="noopener" translate="no">+62 878-1436-0273</a></div>
+      </div>
+    </section>
+
+    <p class="disclaimer">
+      <span data-lang="id">Kebijakan ini disediakan untuk transparansi umum dan bukan merupakan nasihat hukum.</span>
+      <span data-lang="en">This policy is provided for general transparency and does not constitute legal advice.</span>
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <a href="/">← <span data-lang="id">Kembali ke beranda</span><span data-lang="en">Back to home</span></a>
+    <div class="copy">© <span id="yr"></span> <span translate="no">Homeware Depo</span></div>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.documentElement.lang = l;
+    document.getElementById('lg-id').classList.toggle('on', l==='id');
+    document.getElementById('lg-en').classList.toggle('on', l==='en');
+    try{ localStorage.setItem('hd-lang', l); }catch(e){}
+    document.title = (l==='en' ? 'Privacy Policy' : 'Kebijakan Privasi') + ' · Homeware Depo';
+  }
+  // Match the visitor to the main site's language choice if they set one
+  (function(){
+    var saved; try{ saved = localStorage.getItem('hd-lang'); }catch(e){}
+    var l = saved || ((navigator.language||'').toLowerCase().startsWith('en') ? 'en' : 'id');
+    setLang(l);
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
